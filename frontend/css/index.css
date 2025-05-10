@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+:root {
+    --vh-value: 50vh; /* Переменная для 50vh */
+    --rem-value: 5rem; /* Переменная для 2rem */
+}
+
 a {
     text-decoration: none;
     transition: transform .3s;
@@ -192,6 +197,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    justify-content: space-between;
 }
 
 .screen2-header-content {
@@ -199,6 +205,15 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.screen2-header-img {
+    height: calc(var(--vh-value) - var(--rem-value));
+}
+
+
+.screen2-header-img img {
+    height: 100%;
 }
 
 .screen2-footer {
@@ -304,6 +319,14 @@ input {
     justify-content: center;
     gap: 2rem;
     height: 50vh;
+}
+
+.screen3-img {
+    height: calc(var(--vh-value) - var(--rem-value));
+}
+
+.screen3-img img {
+    height: 100%;
 }
 
 .screen-text_title {

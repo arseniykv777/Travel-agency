@@ -9,38 +9,44 @@
 :root {
     --vh-value: 50vh; /* Переменная для 50vh */
     --rem-value: 5rem; /* Переменная для 2rem */
+    --wd-value: 100px;
 }
 
 a {
     text-decoration: none;
-    transition: transform .3s;
+    transition: opacity .3s;
 }
 
 a:hover {
-    transform: scale(1.1);
+    opacity: 0.7;
 }
 
-body {
+html {
     overflow-x: hidden;
+}
+
+.open {
+    display: flex !important;
 }
 
 .screen1 {
     padding-top: 1rem;
-    height: 100vh;
+    height: max-content;
     width: 100vw;
     background-image: url(../img/background/screen1_back.png);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
+    padding-bottom: 2rem;
 }
 
 .screen1-content { 
     width: 1500px;
-    height: 100vh;
+    height: max-content;
     display: flex;
     flex-direction: column;
-    gap: 10rem;
+    gap: 5vw;
     position: relative;
 }
 
@@ -104,8 +110,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
-    top: 70vh;
 }
 
 .screen1-main_footer__social-p {
@@ -122,13 +126,11 @@ header {
     display: flex;
     flex-direction: column;
     gap: 15rem;
-    position: absolute;
-    top: 30vh;
-    transform: translateY(-30%);
 }
 
 .screen1-main_footer__tours {
     display: flex;
+    flex-wrap: wrap;
     gap: 3rem;
 }
 
@@ -147,12 +149,12 @@ header {
     cursor: pointer;
 }
 
-.screen2-header {
+.screen2-header, .screen3 {
     display: flex;
     width: max-content;
-    justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
+    margin-inline: auto;
 }
 
 .screen2-headert-text_title {
@@ -202,22 +204,18 @@ header {
     justify-content: center;
     align-items: center;
 }
-
-.screen2-header-img {
-    height: calc(var(--vh-value) - var(--rem-value));
+.screen2-header-photo {
+    width: 100%;
 }
-
-
-.screen2-header-img img {
-    height: 100%;
-}
-
 .screen2-footer {
     height: 520px;
     background-image: url(../img/background/screen2_back.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .screen2-footer-content {
@@ -226,7 +224,7 @@ header {
     display: flex;
     align-items: center;
     height: 520px;
-    width: 100%;
+    width: max-content;
     gap: 5rem;
 }
 
@@ -268,6 +266,7 @@ input {
     line-height: 24px;
     text-align: left;
     padding: 1rem 2rem;
+    transition: border-color .3s;
 }
 
 .form_button {
@@ -288,6 +287,9 @@ input {
 
 .form_button:hover {
     opacity: 0.7;
+}
+
+.form_button:active {
     transform: scale(1.1);
 }
 
@@ -315,12 +317,9 @@ input {
     height: 50vh;
 }
 
-.screen3-img {
-    height: calc(var(--vh-value) - var(--rem-value));
-}
 
-.screen3-img img {
-    height: 100%;
+.screen3-photo {
+    width: 100%;
 }
 
 .screen-text_title {
@@ -386,4 +385,310 @@ footer {
 
 .footer-imgs img {
     cursor: pointer;
+}
+
+.burger {
+    display: none;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    justify-content: flex-end;
+    width: 35px;
+    height: 22px;
+}
+
+.burger span {
+    height: 2px;
+    width: 80%;
+    transform: scale(1);
+    background-color: #FAF6F2;
+}
+
+.burger::before, .burger::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #FAF6F2;
+    transition: all .3s ease 0s;
+}
+
+.burger::before { top: 0;}
+
+.burger::after { bottom: 0;}
+
+.burger.active span { transform: scale(0); }
+
+.burger.active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+}
+
+.hidden_profile {
+    display: none;
+}
+
+.footer-logo {
+    display: none;
+}
+
+@media (max-width: 1600px) {
+    .screen2-footer-content {
+        position: static;
+    }
+
+    .screen2-footer {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1550px) {
+    .screen1-content, footer {
+        width: calc(100vw - var(--wd-value));
+    }
+
+    .screen2-header-content, .screen3, .screen2-footer-content, footer {
+        width: calc(100vw - var(--wd-value));
+        justify-content: center;
+        margin-inline: auto;
+        height: max-content;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    } 
+
+    footer {
+        justify-content: space-between;
+    }
+
+    .screen2-footer {
+        height: max-content;
+    }
+
+    .screen1-main_footer {
+        flex-direction: column;
+        align-items: normal;
+        gap: 2rem;
+    }
+}
+
+
+
+@media (max-width: 1150px) {
+
+    .screen2-headert-text_title, .screen-text_title {
+        color: rgb(0, 0, 0);
+        font-family: Playfair Display;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 50px;
+        letter-spacing: 0;
+        text-align: left;
+    }
+    
+    .screen2-header-text_p, .screen-text_text {
+        color: rgb(0, 0, 0);
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: left;
+    }
+
+}
+
+@media (max-width: 1100px) {
+    .hidden_australia {
+        display: none;
+    }
+
+    .screen2-header-text_p, .screen-text_text {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+
+@media (max-width: 1279px) {
+    .screen3-text {
+        padding: 1rem 0 1rem 1rem;
+    }
+
+    .screen2-header-text {
+        padding: 1rem 1rem 1rem 1rem;
+    }
+    
+}
+
+@media (max-width: 1024px) {
+
+    .hidden_italy {
+        display: none;
+    }
+
+    .screen1-main_footer__social {
+        position: static;
+    }
+
+    .screen1-title {
+        color: rgb(255, 255, 255);
+        font-family: Playfair Display;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 48px;
+        text-align: left;
+    }
+
+    .screen1-main_header__p {
+        /* Незабываемые туры по уголкам различных стран */
+        color: rgb(255, 255, 255);
+        font-family: Montserrat;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+    }
+
+    .screen3-text {
+        padding: 0;
+    }
+
+    .screen2-header-text {
+        padding: 0rem;
+    }
+
+    .screen2-header {
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+
+
+    .hidden_screen {
+        display: none;
+    }
+
+    .screen3 {
+        justify-content: left;
+    }
+
+    .footer-nav {
+        gap: 1rem;
+    }
+
+    .footer-nav a {
+        font-size: 16px;
+    }
+
+    .header_nav {
+        gap: 2rem;
+    }
+
+    .header_nav a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .burger {display: flex;} 
+
+    .header-profile {
+        display: none;
+    }
+
+    .header_nav {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        inset: 0;
+        z-index: 50;
+        overflow-y: auto;
+        padding: 50px 40px;
+        background-color: black;
+        animation: burgerAnimation .4s;
+    }
+
+    .screen2-footer-text_title {
+        font-size: 36px;
+    }
+    
+    .screen2-footer-text_text {
+        font-size: 16px;
+    }
+    
+    .screen2-footer-text {
+        gap: .5rem;
+    }
+    
+    .screen2-footer-content {
+        flex-direction: column;
+        align-items: normal;
+        gap: 2rem;
+        width: calc(100vw - var(--wd-value));
+        margin-inline: auto;
+    }
+
+    form input, .form_button {
+        width: max-content;
+    }
+
+    .screen1-main_footer__tours {
+        display: none;
+    }
+
+    .screen1-main_footer__social {
+        position: static;
+    }
+
+    .footer-imgs {
+        display: none;
+    }
+
+    footer {
+        gap: 2rem;
+        flex-direction: column;
+    }
+
+    .footer-nav {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .footer-logo {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-nav {
+        flex-direction: column;
+    }
+
+    .screen1-main_footer__social-p {
+        font-size: 15px;
+    }
+
+    .screen2-header-text_p, .screen-text_text {
+        font-size: 16px;
+        line-height: 1.3rem;
+    }
+
+    .screen3-text {
+        width: calc(100vw - var(--wd-value));
+    }
+
+    .screen-text_title {
+        font-size: 28px;
+    }
+}
+
+@keyframes burgerAnimation {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }

@@ -10,11 +10,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <!-- fonts -->
 
     <!-- jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- scripts -->
+    <script src="js/send_advice.js" defer></script>
+    <script src="js/burger.js" defer></script>
 
 </head>
 <body>
@@ -29,9 +31,14 @@
                     <a href="#" class="header_nav__link">Все туры</a>
                     <a href="#" class="header_nav__link">Отзывы</a>
                     <a href="#" class="header_nav__link">Контакты</a>
+                    <a href="#" class="header-profile hidden_profile">Профиль</a>
                 </nav>
 
                 <a href="#" class="header-profile">Профиль</a>
+
+                <div class="burger">
+                    <span></span>
+                </div>
             </header>
 
             <div class="screen1-main">
@@ -39,7 +46,7 @@
                     <h2 class="screen1-title">Открой новый мир</h2>
                     <p class="screen1-main_header__p">Незабываемые туры<br>по уголкам различных стран</p>
 
-                    <a class="screen1-main_header__btn" href="#">Оставить заявку</a>
+                    <a class="screen1-main_header__btn" href="#mail_sender">Оставить заявку</a>
                 </div>
             </div>
 
@@ -56,16 +63,16 @@
                 </div>
 
                 <div class="screen1-main_footer__tours">
-                    <a href="#" class="screen1-main_footer_tours-tour">
+                    <a href="#">
                         <img src="img/tours/01.png" alt="tour alp">
                     </a>
 
-                    <a href="#" class="screen1-main_footer_tours-tour">
-                        <img src="img/tours/2.png" alt="tour italy">
+                    <a href="#" class="hidden_italy">
+                        <img src="img/tours/2.png" alt="tour italy" class="hidden_italy">
                     </a> 
 
-                    <a href="#" class="screen1-main_footer_tours-tour">
-                        <img src="img/tours/3.png" alt="tour australia">
+                    <a href="#" class="hidden_australia">
+                        <img src="img/tours/3.png" alt="tour australia" class="hidden_australia">
                     </a> 
                 </div>
             </div>
@@ -74,14 +81,13 @@
     <div class="screen2">
         <div class="screen2-header-content">
             <div class="screen2-header">
-                <a class="screen2-header-img">
-                    <img src="img/tours/4.png" alt="tour4">
-                </a>
+
+                <a href="#" style="width: 50%;" class="hidden_screen"><img src="img/tours/4.png" alt="tour4" class="screen2-header-photo"></a>
 
                 <div class="screen2-header-text">
                     <h2 class="screen2-headert-text_title">Посмотрите все <br>направления туров</h2>
-
-                    <p class="screen2-header-text_p">Незабываемые красоты Норвегии с редкими <br>породами деревьев. Местная архитектура и<br> первозданный вид дикой природы.</p>
+                    
+                    <p class="screen2-header-text_p" id="mail_sender">Незабываемые красоты Норвегии с редкими <br>породами деревьев. Местная архитектура и<br> первозданный вид дикой природы.</p>
 
                     <a href="#" class="screen2-header-text_btn">Смотреть все</a>
                 </div>
@@ -91,8 +97,8 @@
         <div class="screen2-footer">
             <div class="screen2-footer-content">
                 <div class="screen2-footer-text">
-                    <h2 class="screen2-footer-text_title">Оставьте заявку на <br> бесплатную <br> консультацию</h2>
-                    <p class="screen2-footer-text_text">Мы перезвоним вам <br>в ближайшее время </p>
+                    <h2 class="screen2-footer-text_title" >Оставьте заявку на <br> бесплатную <br> консультацию</h2>
+                    <p class="screen2-footer-text_text">Мы сразу отправим письмо<br> в ближайшее время </p>
                 </div>
 
                 <form method="post">
@@ -118,16 +124,12 @@
             <a class="screen3-text_btn" href="#">Читать отзывы</a>
         </div>
 
-        <a class="screen3-img" href="#">
-           <img src="img/background/screen3_back.png" alt=""> 
-        </a>
+        <a href="#" style="width: 50%;" class="hidden_screen"><img src="img/background/screen3_back.png" alt="" class="screen3-photo"></a>
     </div>
 
     <div class="footer-content">
         <footer>
-            <a class="footer-logo" href="index.html">
-                <img src="img/logo/logo_dark.png" alt="logo_dark">
-            </a>
+
 
             <nav class="footer-nav">
                 <a href="#">Политика <br> конфиденциальности</a>
@@ -140,6 +142,8 @@
                 <img src="img/social/Telegram_dark.png" alt="Telegram">
                 <img src="img/social/Twitter-Circled_dark.png" alt="Twitter">
             </div>
+            
+            <img src="img/logo/logo_dark.png" alt="logo dark" class="footer-logo">
         </footer>
     </div>
 </body>

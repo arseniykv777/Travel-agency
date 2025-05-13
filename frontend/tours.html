@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Турист: все туры</title>
+    <link rel="stylesheet" href="css/tours.css">
+    <link rel="stylesheet" href="css/burger.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="js/burger_dark.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="img/logo/logo_dark.png" alt="Логотип 'Турист'" class="header__logo"></a>
+
+        <nav class="header_nav">
+            <ul>
+                <li><a href="#" class="text header-nav__link current_page">Все туры</a></li>
+                <li><a href="#" class="text header-nav__link ds">Отзывы</a></li>
+                <li><a href="#" class="text header-nav__link ds">Контакты</a></li>
+                <li><a href="#" class="text header-nav__link hidden asd">Профиль</a></li>
+            </ul>
+        </nav>
+
+        <a href="#" class="text header__profile">Профиль</a>
+
+        <div class="burger">
+            <span></span>
+        </div>
+    </header>
+
+    <main>
+        <section class="main-title">
+            <h1 class="hidden">Туры из Уфы</h1>
+            <img src="img/tours/tours.png" alt="Картинка 'Туры из Уфы'" class="main-title__logo">
+
+            <section class="main-title-text">
+                <h2 class="text title">Куда можно поехать отдохнуть прямо сейчас</h2>
+                <p class="text description">Посмотрите все доступные направления для вылета из уфы</p>
+            </section>
+        </section>
+
+        <div class="main-tours">
+            <div class="tour">
+                <div class="tour-title">
+                    <div class="tour__logo-section">
+                        <img src="img/tours/no_text/1.png" alt="Картинка 'Тур Сказочная Италия" class="tour__logo">
+                    </div>
+
+                    <div class="tour-text_content">
+                        <p class="text tour__place">Швейцария</p>
+
+                        <div class="tour-stars">
+                            <span><img src="img/tours/star.png" alt="Звезда оценки"></span>
+                            <span><img src="img/tours/star.png" alt="Звезда оценки"></span>
+                            <span><img src="img/tours/star.png" alt="Звезда оценки"></span>
+                            <span><img src="img/tours/star.png" alt="Звезда оценки"></span>
+                            <span><img src="img/tours/star.png" alt="Звезда оценки"></span>
+                        </div>
+
+                        <h3 class="text tour__name">Альпийские горы</h3>
+                    </div>
+                </div>
+
+                <div class="tour-desc">
+                    <div class="vertical-hr"></div>
+
+                    <div class="tour-info">
+                        <div class="tour-content_price">
+                            <p class="text tour__price__text">цена от:</p>
+                            <p class="text tour__price">200 000₽</p>
+                        </div>
+
+                        <a href="#" class="text tour__link">Перейти</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tour">
+                <div class="tour-title">
+
+                    <div class="tour__logo-section">
+                        <img src="img/tours/no_text/2.png" alt="Картинка 'Тур Сказочная Италия" class="tour__logo">
+                    </div>
+
+                    <div class="tour-text_content">
+                        <p class="text tour__place">Италия</p>
+
+                        <div class="tour-stars">
+                            <span><img src="img/tours/star.png" alt="Звезда оценки"></span>
+                            <span><img src="img/tours/star.png" alt="Звезда оценки"></span>
+                            <span><img src="img/tours/star.png" alt="Звезда оценки"></span>
+                            <span><img src="img/tours/star.png" alt="Звезда оценки"></span>
+                        </div>
+
+                        <h3 class="text tour__name">Сказочная Италия</h3>
+                    </div>
+                </div>
+
+                <div class="tour-desc">
+                    <div class="vertical-hr"></div>
+
+                    <div class="tour-info">
+                        <div class="tour-content_price">
+                            <p class="text tour__price__text">цена от:</p>
+                            <p class="text tour__price">250 000₽</p>
+                        </div>
+
+                        <a href="#" class="text tour__link">Перейти</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tour">
+                <div class="tour-title">
+                    <div class="tour__logo-section">
+                        <img src="img/tours/no_text/3.png" alt="Картинка 'Тур Сказочная Италия" class="tour__logo">
+                    </div>
+
+                    <div class="tour-text_content">
+                        <p class="text tour__place">Австралия</p>
+
+                        <div class="tour-stars">
+                            <span><img src="img/tours/star.png" alt="Звезда оценки"></span>
+                            <span><img src="img/tours/star.png" alt="Звезда оценки"></span>
+                            <span><img src="img/tours/star.png" alt="Звезда оценки"></span>
+                            <span><img src="img/tours/star.png" alt="Звезда оценки"></span>
+                        </div>
+
+                        <h3 class="text tour__name">Австралийская пустыня</h3>
+                    </div>
+                </div>
+
+                <div class="tour-desc">
+                    <div class="vertical-hr"></div>
+
+                    <div class="tour-info">
+                        <div class="tour-content_price">
+                            <p class="text tour__price__text">цена от:</p>
+                            <p class="text tour__price">150 000₽</p>
+                        </div>
+
+                        <a href="#" class="text tour__link">Перейти</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tour">
+                <div class="tour-title">
+                    <div class="tour__logo-section">
+                        <img src="img/tours/no_text/4.png" alt="Картинка 'Тур Сказочная Италия" class="tour__logo">
+                    </div>
+
+                    <div class="tour-text_content">
+                        <p class="text tour__place">Норвегия</p>
+
+                        <div class="tour-stars">
+                            <span><img src="img/tours/star.png" alt="Звезда оценки"></span>
+                            <span><img src="img/tours/star.png" alt="Звезда оценки"></span>
+                            <span><img src="img/tours/star.png" alt="Звезда оценки"></span>
+                            <span><img src="img/tours/star.png" alt="Звезда оценки"></span>
+                        </div>
+
+                        <h3 class="text tour__name">Большой водопад</h3>
+                    </div>
+                </div>
+
+                <div class="tour-desc">
+                    <div class="vertical-hr"></div>
+
+                    <div class="tour-info">
+                        <div class="tour-content_price">
+                            <p class="text tour__price__text">цена от:</p>
+                            <p class="text tour__price">300 000₽</p>
+                        </div>
+
+                        <a href="#" class="text tour__link">Перейти</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="footer-content">
+        <footer>
+            <a href="index.html"><img src="img/logo/logo_dark.png" class="footer-logo logo2"></a>
+
+            <nav class="footer-nav">
+                <a href="#" class="text">Политика <br> конфиденциальности</a>
+                <a href="#" class="text">Соглашение на обработку <br>персональных данных</a>
+            </nav>
+
+            <div class="footer-imgs">
+                <img src="img/social/Facebook_dark.png" alt="facebook">
+                <img src="img/social/VK-Circled_dark.png" alt="vk">
+                <img src="img/social/Telegram_dark.png" alt="Telegram">
+                <img src="img/social/Twitter-Circled_dark.png" alt="Twitter">
+            </div>   
+            
+            <a href="index.html" class="logo3"><img src="img/logo/logo_dark.png" class="footer-logo logo3"></a>
+        </footer>
+    </div>
+</body>
+</html>

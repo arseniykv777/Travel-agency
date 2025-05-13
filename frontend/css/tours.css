@@ -1,0 +1,428 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --vh-value: 50vh; /* Переменная для 50vh */
+    --rem-value: 5rem; /* Переменная для 2rem */
+    --wd-value: 100px;
+}
+
+body {
+    margin-inline: auto;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    transition: opacity .3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.hidden {
+    display: none;
+}
+
+.text {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+header {
+    width: 1500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_nav ul {
+    gap: 4rem;
+}
+
+.current_page {
+    color: rgb(94, 153, 201);
+}
+
+.main-title__logo {
+    align-self: center;
+
+}
+
+.main-title {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 59px;
+}
+
+.description {
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 40px;
+    
+}
+
+.main-title-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.tour {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 36px;
+    background: rgba(234, 242, 245, 0.59);
+}
+
+.tour-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.tour__place {
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.tour__name {
+    font-size: 28px;
+}
+
+.tour-text_content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.vertical-hr {
+    width: 2px;
+    background-color: rgb(158, 158, 158);;
+}
+
+.tour-desc {
+    display: flex;
+    width: max-content;
+    gap: 1rem;
+}
+
+.tour__price__text {
+    font-weight: 300;
+}
+
+.tour__price {
+    font-size: 28px;
+}
+
+.tour-info {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+
+.tour-content_price {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tour__link {
+    border-radius: 24px;
+    background: rgb(94, 153, 201);
+    color: #FFF;
+    text-align: center;
+    padding: 1rem 2rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.tour__logo-section {
+    width: 40%;
+}
+
+.tour__logo {
+    width: 100%;
+    height: auto;
+}
+
+.main-tours {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.logo3 {
+    display: none;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    width: 1500px;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 4rem;
+}
+
+.footer-nav a {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left; 
+}
+
+.footer-imgs {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-imgs img {
+    cursor: pointer;
+}
+
+.asd {
+    color: #FFF;
+}
+
+.footer-content {
+    width: 100%;
+    margin-top: 3rem;
+    background-color: #EDF2F4;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.burger.white::after, .burger.white::before, .burger.white span {
+    background-color: white;
+}
+
+.burger span {
+    background-color: black;
+}
+
+.burger::before, .burger::after {
+    background-color: black;
+}
+
+
+@media (max-width: 1550px) {
+    header, footer, main {
+        width: calc(100vw - var(--wd-value));
+    }
+
+    .main-title__logo {
+        width: 80%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .title {
+        font-size: 36px;
+    }
+
+    .description {
+        font-size: 24px;
+    }
+
+    .main-title-text {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .tour__place, .tour__name {
+        font-size: 24px;
+    }
+
+    .tour-stars img {
+        width: 10%;
+    }
+
+    .tour__price__text {
+        font-size: 18px;
+    }
+
+    .tour__price {
+        font-size: 22px;
+    }
+
+    .tour__link {
+        font-size: 16px;
+        padding: .5rem 1rem;
+    }
+
+    .tour-content_price {
+        gap: .5rem;
+    }
+
+    .tour-info {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .header_nav ul {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .header_nav a {
+        font-size: 18px;
+    }
+
+    .asd {
+        display: block;
+    }
+
+    .logo3 {
+        display: block;
+    }
+
+    .title {
+        font-size: 24px;
+        line-height: normal;
+    } 
+    .description {
+        font-size: 18px;
+        line-height: normal;
+    }
+
+    .main-title-text {
+        gap: .2rem;
+    }
+
+    .footer-imgs {
+        display: none;
+    }
+
+        footer {
+        gap: 2rem;
+        flex-direction: column;
+    }
+
+    .footer-nav {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .logo2 {
+        display: none;
+    }
+
+    .footer-logo {
+        display: block;
+    }
+    
+        .logo2 {
+        display: none;
+    }
+
+
+    .footer-nav a {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 700px) {
+    .tour__place, .tour__name {
+        font-size: 16px;
+    }
+
+    .tour__price__text {
+        font-size: 14px;
+    }
+
+    .tour__price {
+        font-size: 18px;
+    }
+
+    .tour__link {
+        font-size: 12px;
+        padding: .25rem .5rem;
+    }
+
+    .tour {
+        padding: .5rem 1rem;
+        border-radius: 16px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .main-title__logo {
+        width: 100%;
+    }
+
+    .tour-text_content {
+        gap: .2rem;
+    }
+
+    main {
+        padding-top: 2rem;
+        width: 90vw;
+        gap: 1rem;
+    }
+
+    .tour {
+        padding-inline: 0;
+    }
+
+
+    .tour__logo {
+        width: 100%;
+    }
+
+    .text {
+        font-size: 13px;
+    }
+
+    .tour__link {
+        font-size: 8px;
+        padding: 1px 2px;
+    }
+}

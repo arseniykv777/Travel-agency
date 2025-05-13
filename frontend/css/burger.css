@@ -3,7 +3,7 @@
     position: relative;
     z-index: 50;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
     width: 35px;
     height: 22px;
 }
